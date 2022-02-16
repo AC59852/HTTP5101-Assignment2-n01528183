@@ -34,6 +34,7 @@ namespace Loops_W2022.Controllers
             List<int> numbers = new List<int>();
             List<int> numbers2 = new List<int>();
             int total = 0;
+            string message = "";
 
             for (int counter = start; counter <= m; counter++)
             {
@@ -53,7 +54,10 @@ namespace Loops_W2022.Controllers
                 }
             }
 
-            return "there are " + total + " total ways to get the sum of 10.";
+            if (total <= 1) message = "there is " + total + " way to get the sum of 10.";
+            else message = "there are " + total + " total ways to get the sum of 10.";
+
+            return message;
         }
     }
 }
